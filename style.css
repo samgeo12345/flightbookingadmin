@@ -31,6 +31,9 @@ a:hover{
     width:100%;
     display:flex;
 }
+.logo2{
+    display:none;
+}
 .logoimg{
     block-size:4em;
 }
@@ -188,10 +191,13 @@ textarea{
     font-family:Verdana;
     padding-bottom:8%;
 }
-#add,#update,#detailscontent{
+.inputs{
+    margin-top:1%;
+}
+#add,#update,#detailscontent,#payment{
     border-radius:6px;
     background-color:whitesmoke;
-    margin:30px;
+    margin:30px auto;
     padding:2%;
     width:90%;
     box-shadow:0px 0px 2px rgba(0,0,0,0.9);
@@ -210,13 +216,13 @@ textarea{
     font-weight:bold;
     cursor:pointer;
     background-color:dodgerblue;
-    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    box-shadow:0px 0px 1.5px rgba(0,0,0,0.9);
     transition:box-shadow 0.1s ease-in-out,color 0.1s ease-in-out,background-color 0.1s ease-in-out;
 }
 .view-flight-details:hover{
     background-color:white;
     color:dodgerblue;
-    box-shadow:0px 0px 1px rgba(30,144,255,0.9);
+    box-shadow:0px 0px 1.5px rgba(30,144,255,0.9);
 }
 .delete-passenger{
     block-size:25px;
@@ -314,4 +320,83 @@ span{
 .company,.phone,.email{
     margin-top:-2%;
     margin-left:2%;
+}
+@media(max-width:800px){
+    html{
+        font-size:small;
+    }
+    .button{
+        font-size:small;
+        padding:10px;
+    }
+    .statementoption{
+        font-size:xx-small;
+    }
+    .nav{
+        padding:0;
+        flex-wrap:wrap;
+    }
+    .options{
+        margin-left:0%;
+    }
+    .option,.optionhome,.optionabout,.optionhelp,.optionpassen{
+        display:inline-block;
+        box-sizing: border-box;
+    }
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .searchbutton{
+        padding:0px 10px;
+    }
+    .logo{
+        display:none;
+    }
+    .logo2{
+        display:flex;
+    }
+    .loimg{
+        margin-left:20%;
+    }
+    .socialmediadiv{
+        margin:0;
+    }
+    .mainimg{
+        margin-top:5%;
+        block-size:14em;;
+    }
+    .logoimg2{
+        block-size:4em;
+    }
+    .hword{
+        font-size:x-small;
+    }
+    .sendbutton{
+        width:30%;
+        block-size:40px;
+        font-size:x-small;
+    }
+    input,textarea{
+        block-size:30px;
+        width:98%;
+    }
+    .innerbutton{
+        width:30%;
+        block-size:40px;
+        font-size:x-small;
+    }
+    #facebook,#linkedin,#github,#whatsapp{
+        font-size:xx-large;
+    }
+    .view-flight-details,.delete-passenger{
+        block-size:20px;
+        font-size:x-small;
+    }
+    .note{
+        font-size:x-small;
+    }
+    #searchicon{
+        font-size:small;
+    }
 }
