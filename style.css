@@ -321,6 +321,14 @@ span{
     margin-top:-2%;
     margin-left:2%;
 }
+#flightDetailsContainer{
+    width:70%;
+    margin:5% auto;
+    padding:5%;
+    border-radius:6px;
+    background-color:whitesmoke;
+    box-shadow:0px 0px 1.5px rgba(0,0,0,0.9);
+}
 @media(max-width:800px){
     html{
         font-size:small;
