@@ -219,6 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let flights = JSON.parse(localStorage.getItem('flights')) || [];
         flights.push(flightDetails);
         localStorage.setItem('flights', JSON.stringify(flights));
+        flightDetailsForm.reset();
 
         alert('Flight details added successfully!');
     });
