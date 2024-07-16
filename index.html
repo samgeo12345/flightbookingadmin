@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" scale="1.0">
-        <title>FLIGHT BOOKING FOR ADMINS</title>
+        <title>AIRLINE BOOKING</title>
+        <link rel="icon" href="img/wp2973292-aeroplane-wallpaper-3d.jpg">
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/76f5d35c55.js" crossorigin="anonymous"></script>
     </head>
@@ -11,46 +12,89 @@
         <div class="nav">
         <div class="logo">
             <div><img class="logoimg" src="img/aviation_logo-22.jpg"></div>
-            <div style="margin-left:2%;"><h2>𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑩𝒐𝒐𝒌𝒊𝒏𝒈</h2></div>
+            <div style="margin-left:2%;color:royalblue;"><h2>𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑩𝒐𝒐𝒌𝒊𝒏𝒈</h2></div>
         </div>
         <div class="options">
-            <div class="option"><a href="Home">Home</a></div>
-            <div class="option"><a href="About">About</a></div>
-            <div class="option"><a href="Help">Help</a></div>
-            <div class="option"><a href="customer">Passengers</a></div>
+            <div class="optionhome"><a class="homes" href="index.html">Home<hr></a></div>
+            <div class="option"><a href="about.html">About</a></div>
+            <div class="option"><a href="help.html">Help</a></div>
+            <div class="option"><a href="customer.html">Passengers</a></div>
         </div>
         </div>
         <img class="mainimg" src="img/air.jpg">
-        <div><button id="flightsearch" class="button">FLIGHT SEARCH</button></div>
-        <div id="searchcontent" style="display:none;">
-            <p>One-way, round-trip, and multi-city options.
-                Search by departure and arrival cities.
-                Flexible date searches to find the best prices.</p>
-            <input type="text" placeholder="Brand name of the flight">
-            <input type="text" placeholder="model name of the flight">
+        <div class="statementoption"><h3>Maintain all the details of passengers by using the following options.</h3></div>
+        <hr class="hr">
+        <div><button id="addpassenger" class="button">ADD PASSENGER</button></div>
+        <div id="add" style="display:none;">
+            <form id="passengerForm">
+            <p>Passenger Name:</p>
+            <input type="text" id="name" placeholder="Name" required>
+            <p>Passenger Email:</p>
+            <input type="email" id="email" placeholder="Email" required>
+            <p>Passenger Country:</p>
+            <input type="text" id="country" placeholder="Country" required>
+            <p>Passenger State:</p>
+            <input type="text" id="state" placeholder="State" required>
+            <p>Passenger Phone No:</p>
+            <input type="number" id="phone" placeholder="Phone no" required>
+            <p>Gender:</p>
+            <input type="text" id="gender" placeholder="Male/Female/Other" required>
+            <p>Passenger Address:</p>
+            <textarea type="address" id="address" placeholder="Address of the passenger" required></textarea>
+            <div class="innerbuttondiv">
+            <button class="innerbutton">Add Passenger</button>
+            </div>
+            </form>
         </div>
         <div><button id="flightdetails" class="button">FLIGHT DETAILS</button></div>
         <div id="detailscontent" style="display:none;">
-            Detailed flight information including departure and arrival times.
-            Duration of the flight.
-            Layover details for connecting flights.
-            Aircraft type and amenities.
-        </div>
-        <div><button id="addpassenger" class="button">ADD PASSENGER</button></div>
-        <div id="add" style="display:none;">
-            <p>One-way, round-trip, and multi-city options.
-                Search by departure and arrival cities.
-                Flexible date searches to find the best prices.</p>
-            <input type="text" placeholder="Brand name of the flight">
-            <input type="text" placeholder="model name of the flight">
+            <form id="flightDetailsForm">
+                <p>Passenger ID:</p>
+                <input type="number" id="passengerId" placeholder="ID" required>
+                <p>Flight no:</p>
+                <input type="number" id="flightNumber" placeholder="Number" required>
+                <p>Flight Brand:</p>
+                <input type="text" id="flightBrand" placeholder="Brand" required>
+                <p>Flight Model:</p>
+                <input type="text" id="flightModel" placeholder="Model" required>
+                <p>Seat no:</p>
+                <input type="number" id="seatNumber" placeholder="Seat no" required>
+                <p>Origin:</p>
+                <input type="text" id="origin" placeholder="Origin Point" required>
+                <p>Destination:</p>
+                <input type="text" id="destination" placeholder="To Destination"required>
+                <p>Arrival Time:</p>
+                <input type="datetime-local" id="arrivalTime" required>
+                <p>Departure Time:</p>
+                <input type="datetime-local" id="departureTime" required>
+                <div class="innerbuttondiv">
+                    <button class="innerbutton" type="submit">Add Flight Detail</button>
+                </div>
+            </form>            
         </div>
         <div><button id="updatepassenger" class="button">UPDATE PASSENGER</button></div>
         <div id="update" style="display:none;">
-            <p>One-way, round-trip, and multi-city options.
-                Search by departure and arrival cities.
-                Flexible date searches to find the best prices.</p>
-            <input type="text" placeholder="Brand name of the flight">
-            <input type="text" placeholder="model name of the flight">
+            <form id="updatePassengerForm">
+            <p>Passenger ID:</p>
+            <input id="updateId" type="text" placeholder="Id" required>
+            <p>Passenger Name:</p>
+            <input id="updateName" type="text" placeholder="Name" required>
+            <p>Passenger Email:</p>
+            <input id="updateEmail" type="email" placeholder="Email" required>
+            <p>Passenger Country:</p>
+            <input id="updateCountry" type="text" placeholder="Country" required>
+            <p>Passenger State:</p>
+            <input id="updateState" type="text" placeholder="State" required>
+            <p>Passenger Phone No:</p>
+            <input id="updatePhone" type="number" placeholder="Phone no" required>
+            <p>Gender:</p>
+            <input id="updateGender" type="text" placeholder="Male/Female/Other" required>
+            <p>Passenger Address:</p>
+            <textarea id="updateAddress" type="address" placeholder="Address of the passenger" required></textarea>
+            <div class="innerbuttondiv">
+            <button class="innerbutton">Update Passenger</button>
+            </div>
+            </form>
         </div>
         <div><button id="paymentoption" class="button">PAYMENT METHODS</button></div>
         <div id="payment" style="display:none;">
@@ -60,65 +104,16 @@
             <input type="text" placeholder="Brand name of the flight">
             <input type="text" placeholder="model name of the flight">
         </div>
-        <p>
-           
-            Flight Search:
-
-
-Flight Details:
-Detailed flight information including departure and arrival times.
-Duration of the flight.
-Layover details for connecting flights.
-Aircraft type and amenities.
-Booking Options:
-
-Seat selection (window, aisle, extra legroom).
-Baggage options (checked baggage, carry-on allowances).
-Meal preferences (vegetarian, kosher, halal, etc.).
-Passenger Information:
-
-Adding passenger details (name, contact information, frequent flyer numbers).
-Option to save passenger information for future bookings.
-Payment Methods:
-
-Multiple payment options (credit/debit cards, PayPal, mobile wallets).
-Option to save payment methods for future use.
-Promo codes or discount application.
-Booking Management:
-
-View and manage current bookings.
-Option to change or cancel flights.
-Add special requests (wheelchair assistance, pet travel).
-Notifications and Alerts:
-
-Flight status updates (delays, gate changes).
-Check-in reminders.
-Travel advisories and alerts.
-Check-In:
-
-Online check-in.
-Mobile boarding passes.
-Option to select or change seats during check-in.
-Loyalty Programs:
-
-Integration with frequent flyer programs.
-Ability to earn and redeem miles/points.
-View loyalty account details and status.
-Customer Support:
-
-Contact options for customer service.
-Frequently Asked Questions (FAQ) section.
-Live chat or in-app messaging for assistance.
-Travel Extras:
-
-Option to book hotels, car rentals, and travel insurance.
-Recommendations for activities and tours at your destination.
-User Profile:
-
-Manage personal information and preferences.
-View booking history.
-Save favorite destinations and routes.
+        <br>
+        <div class="socialmediadiv">
+            <hr class="hrbottom">
+            <h3>follow us:</h3>
+            <a href=""><i id="facebook" class="fab fa-facebook-square"></i></a>
+            <a href="https://www.linkedin.com/in/samuel-george-j004"><i id="linkedin" class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/samgeo12345"><i id="github" class="fab fa-github-square"></i></a>
+            <a href=""><i id="whatsapp" class="fab fa-whatsapp-square"></i></a>
+            <p>Created by <span style="color:dodgerblue;">𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑩𝒐𝒐𝒌𝒊𝒏𝒈</span> | <i class="far fa-copyright"></i> 2024 All rights Reserved.</p>
+        </div>
         <script src="index.js"></script>
-        </p>
     </body>
 </html>

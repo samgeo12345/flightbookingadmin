@@ -5,16 +5,22 @@ html,body{
     font-family:Verdana;
 }
 a{
-    color:royalblue;
+    color:black;
     font-size:larger;
     text-decoration:none;
 }
 a:hover{
-    color:black;
+    color:dodgerblue;
+}
+.homes{
+    color:dodgerblue;
+    font-size:larger;
+    text-decoration:none;
 }
 .nav{
     position:fixed;
     background-color:white;
+    top:0;
     box-shadow:0px 0px 1px rgba(0,0,0,0.9);
     padding:10px;
     width:100%;
@@ -24,6 +30,16 @@ a:hover{
     margin-left:1%;
     width:100%;
     display:flex;
+}
+.logoimg{
+    block-size:4em;
+}
+.logo1{
+    display:flex;
+    justify-content:center;
+}
+.logoimg2{
+    block-size:5.5em;
 }
 .options{
     margin-left:4%;
@@ -36,23 +52,266 @@ a:hover{
   padding-left:4%;
   padding-right:4%;
 }
+.optionhome,.optionabout,.optionhelp,.optionpassen{
+    background-color:white;
+    padding-top:5%;
+    padding-left:4%;
+    padding-right:4%;
+}
 .option:hover{
     background-color:whitesmoke;
 }
-.logoimg{
-    block-size:4em;
-}
 .mainimg{
     width:100%;
+}
+.searches{
+    display:flex;
+    overflow:hidden;
+    box-shadow:0px 0px 1.5px rgba(0,0,0,0.9);
+    border-radius:3px;
+    background-color:white;
+}
+.searchbar{
+    flex:1;
+    box-shadow:none;
+    border-style:none;
+    outline:none;
+}
+.searchbar:hover::placeholder{
+    color:black;
+}
+.searchbutton{
+    background-color:dodgerblue;
+    color:white;
+    padding:10px 20px;
+    border-style:none;
+    outline:none;
+    cursor:pointer;
+}
+.searchbutton:hover{
+    background-color:royalblue;
+}
+#searchicon{
+    font-size:x-large;
 }
 .button{
     width:100%;
     padding:20px;
     border-style:none;
     font-variant-caps:all-petite-caps;
+    color:dodgerblue;
     font-size:large;
     box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    cursor:pointer;
 }
 .button:hover{
     background-color:lightgray;
+}
+.statementoption{
+    text-align:center;
+    background-color:dodgerblue;
+    color:white;
+    padding:1px;
+}
+.hr{
+    border-style:solid;
+    border-width:2px;
+    border-color:dodgerblue;
+}
+hr{
+    border-style:solid;
+    border-width:2px;
+}
+.hrbottom{
+    border-style:solid;
+    border-color:lightgray;
+    border-width:1px;
+}
+.socialmediadiv{
+    text-align:center;
+    max-width:800px;
+    margin:30px auto;
+    padding:20px;
+}
+#facebook,#linkedin,#github,#whatsapp{
+    font-size:40px;
+    transition:filter 0.3s ease-in-out,transform 0.3s ease-in-out,color 0.3s ease-in-out
+}
+#facebook:hover,#linkedin:hover,#github:hover,#whatsapp:hover{
+    color:dodgerblue;
+    transform:translateY(-4px);
+    filter:drop-shadow(0px 0px 0.5px rgba(0,0,0,0.9));
+}
+#facebook{
+    color:mediumblue;
+}
+#linkedin{
+    color:mediumblue;
+}
+#github{
+    color:darkorchid;
+}
+#whatsapp{
+    color:limegreen;
+}
+input,textarea{
+    width:100%;
+    border-style:solid;
+    box-shadow:0px 0px 1.5px rgba(0,0,0,0.9);
+    border-color:white;
+    border-radius:2px;
+    block-size:40px;
+}
+.innerbutton{
+    block-size:55px;
+    background-color:dodgerblue;
+    color:white;
+    border-style:none;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    border-radius:5px;
+    font-family:Verdana;
+    cursor:pointer;
+    width:20%;
+    transition:background-color 0.2s ease-in-out;
+}
+.innerbutton:hover{
+        background-color:white;
+        box-shadow:0px 0px 1px 1px rgba(30,144,255,0.9);
+        color:dodgerblue;
+}
+.innerbuttondiv{
+    margin-top:2%;
+    text-align:end;
+}
+textarea{
+    padding:3px;
+    font-family:Verdana;
+    padding-bottom:8%;
+}
+#add,#update,#detailscontent{
+    border-radius:6px;
+    background-color:whitesmoke;
+    margin:30px;
+    padding:2%;
+    width:90%;
+    box-shadow:0px 0px 2px rgba(0,0,0,0.9);
+}
+#searchcontent{
+    border-radius:6px;
+    margin:30px auto;
+    padding:2%;
+    width:40%;
+}
+.view-flight-details{
+    block-size:25px;
+    border:none;
+    border-radius:3px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    background-color:dodgerblue;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    transition:box-shadow 0.1s ease-in-out,color 0.1s ease-in-out,background-color 0.1s ease-in-out;
+}
+.view-flight-details:hover{
+    background-color:white;
+    color:dodgerblue;
+    box-shadow:0px 0px 1px rgba(30,144,255,0.9);
+}
+.delete-passenger{
+    block-size:25px;
+    border:none;
+    border-radius:3px;
+    font-weight:bold;
+    cursor:pointer;
+    color:white;
+    background-color:red;
+    box-shadow:0px 0px 1.5px rgba(0,0,0,0.9);
+    transition:box-shadow 0.1s ease-in-out,color 0.1s ease-in-out,background-color 0.1s ease-in-out;
+}
+.delete-passenger:hover{
+    color:red;
+    background-color:white;
+    box-shadow:0px 0px 1.5px rgba(255,0,0,0.9);
+}
+table tr th{
+    padding:5px;
+    background-color:dodgerblue;
+    color:white;
+}
+table tr td{
+    padding:5px;
+    background-color:whitesmoke;
+}
+table tr{
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+}
+table{
+    text-align:center;
+    border-collapse:collapse;
+    margin:auto;
+}
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.h1 {
+    text-align: center;
+    color:dodgerblue;
+}
+.p {
+    margin: 15px 0;
+}
+.section-title {
+    color:dodgerblue;
+    margin-top: 20px;
+}
+.contactdiv{
+    display:flex;
+    justify-content:start;   
+}
+#input2,#input3,#textarea,.senddiv{
+    margin-top:2%;
+}
+#input1,#input2,#input3,#textarea{
+    box-shadow:0px 0px 2px rgba(0,0,0,0.9);
+}
+#input1:hover,#input2:hover,#input3:hover,#textarea:hover{
+    box-shadow:0px 0px 1px 1px rgba(30,144,255);
+}
+#input1:hover::placeholder,#input2:hover::placeholder,#input3:hover::placeholder,#textarea:hover::placeholder{
+    color:dodgerblue;
+}
+.senddiv{
+    text-align:center;
+}
+.sendbutton{
+    font-family:Verdana;
+    border-radius:6px;
+    border-style:none;
+    background-color:dodgerblue;
+    color:white;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    width:20%;
+    block-size:50px;
+    transition:background-color 0.2s ease-in-out,color 0.2s ease-in-out;
+}
+.sendbutton:hover{
+    box-shadow:0px 0px 1px 1px rgba(30,144,255,0.9);
+    background-color:white;
+    color:dodgerblue;
+}
+span{
+    color:dodgerblue;
+}
+#contacticon{
+    color:dimgray;
+    font-size:xx-large;
+}
+.company,.phone,.email{
+    margin-top:-2%;
+    margin-left:2%;
 }
