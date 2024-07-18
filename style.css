@@ -31,9 +31,6 @@ a:hover{
     width:100%;
     display:flex;
 }
-.logo2{
-    display:none;
-}
 .logoimg{
     block-size:4em;
 }
@@ -312,13 +309,17 @@ table{
 }
 span{
     color:dodgerblue;
+    font-weight:bold;
 }
 #contacticon{
-    color:dimgray;
-    font-size:xx-large;
+    font-size:x-large;
+}
+#passengerId{
+    color:dodgerblue;
 }
 .company,.phone,.email{
     margin-top:-2%;
+    font-size:small;
     margin-left:2%;
 }
 #flightDetailsContainer{
@@ -406,5 +407,8 @@ span{
     }
     #searchicon{
         font-size:small;
+    }
+    #searchcontent{
+        width:60%;
     }
 }

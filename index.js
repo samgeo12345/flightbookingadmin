@@ -162,7 +162,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
 
                 deleteButton.addEventListener('click', function() {
+                    if(confirm(`Do you want to delete passenger ${passenger.id} ?`)){
                     deletePassenger(passenger.id);
+                    }
                 });
             });
         } else {
