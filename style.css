@@ -411,4 +411,7 @@ span{
     #searchcontent{
         width:60%;
     }
+    .company,.phone,.email{
+        margin-top:-4%;
+    }
 }
