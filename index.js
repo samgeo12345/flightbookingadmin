@@ -201,7 +201,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const passengers = JSON.parse(localStorage.getItem('passengers')) || [];
     renderTable(passengers);
 });
-
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('flightDetailsForm').addEventListener('submit', function(event) {
         event.preventDefault();
