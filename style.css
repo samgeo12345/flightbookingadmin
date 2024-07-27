@@ -112,6 +112,38 @@ html,body{
     border-color:dodgerblue;
     background-color:dodgerblue;
 }
+#successmsg{
+    text-align:center;
+    font-size:smaller;
+    font-weight:initial;
+}
+.shake{
+    animation:shake 0.8s;
+}
+@keyframes shake{
+    0%,100%{
+        transform:translateX(0px);
+    }
+    10%,30%,50%,70%,90%{
+        transform:translateX(-2px);
+    }
+    20%,40%,60%,80%{
+        transform:translateX(2px);
+    }
+}
+.error{
+    color:red;
+}
+.loading{
+    color:dodgerblue;
+}
+.success{
+    color:limegreen;
+}
+#input1,#input2,#input3,textarea{
+    background-color:rgb(250,250,250);
+    border-color:rgb(250,250,250);
+}
 a{
     color:black;
     font-size:larger;
@@ -364,6 +396,10 @@ table{
     text-align:center;
     border-collapse:collapse;
     margin:auto;
+}
+#enterfirst{
+    font-size:11px;
+    color:red;
 }
 .container {
     max-width: 800px;

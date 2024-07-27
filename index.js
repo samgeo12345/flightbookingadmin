@@ -133,6 +133,117 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxdJfq_F0APjCQoNEJVtZQ2ROssmIfQhhbBViMee6eNEXiMaqo1XkgEsJrV7v9Q3Q_Y/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('successmsg');
+    const input1 = document.getElementById('input1');
+    const input2 = document.getElementById('input2');
+    const input3 = document.getElementById('input3');
+    const textarea = document.getElementById('textarea');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        // Clear previous message and remove shake class
+        msg.textContent = '';
+        msg.className = '';
+
+        // Trigger shake on every click
+        triggerShake();
+
+        // Validate form inputs in order
+        if (!form['Name'].value) {
+            msg.textContent = 'Name is required!';
+            input1.style.borderColor="red";
+            input1.style.boxShadow="none";
+            input2.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            input3.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            textarea.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            input2.style.borderColor="";
+            input3.style.borderColor="";
+            textarea.style.borderColor="";
+            msg.className = 'error';
+            triggerShake();
+            return;
+        }
+
+        if (!form['Email'].value) {
+            msg.textContent = 'Email is required!';
+            input1.style.borderColor="";
+            input1.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            input3.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            textarea.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            input2.style.borderColor="red";
+            input2.style.boxShadow="none";
+            input3.style.borderColor="";
+            textarea.style.borderColor="";
+            msg.className = 'error';
+            triggerShake();
+            return;
+        }
+
+        if (!form['Phone no'].value) {
+            msg.textContent = 'Phone numder is required!';
+            input1.style.borderColor="";
+            input2.style.borderColor="";
+            input3.style.borderColor="red";
+            input3.style.boxShadow="none";
+            input1.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            input2.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            textarea.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            textarea.style.borderColor="";
+            msg.className = 'error';
+            triggerShake();
+            return;
+        }
+
+        if (!form['Your message'].value) {
+            msg.textContent = 'Message is required!';
+            input1.style.borderColor="";
+            input2.style.borderColor="";
+            input3.style.borderColor="";
+            textarea.style.borderColor="red";
+            textarea.style.borderWidth="2px";
+            textarea.style.boxShadow="none";
+            input1.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            input2.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            input3.style.boxShadow="0px 0px 2px rgba(0,0,0,0.9)";
+            msg.className = 'error';
+            triggerShake();
+            return;
+        }
+
+        // If all validations pass, show loading message
+        msg.textContent = 'Sending message....';
+        msg.className = 'loading';
+
+        // Submit form
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.textContent = 'Sent successfully!';
+                msg.className = 'success';
+                setTimeout(function () {
+                    msg.textContent = '';
+                    msg.className = '';
+                }, 4000);
+                form.reset();
+            })
+            .catch(error => {
+                msg.textContent = 'Error!';
+                msg.className = 'error';
+                console.error('Error!', error.message);
+            });
+    });
+
+    function triggerShake() {
+        // Force reflow to restart the animation
+        msg.classList.remove('shake');
+        void msg.offsetWidth;
+        msg.classList.add('shake');
+    }
+});
+
 document.addEventListener("DOMContentLoaded",function(){
     const searchcontent=document.getElementById("searchcontent");
     const flightsearch=document.getElementById("flightsearch");
@@ -320,16 +431,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for search button
     searchButton.addEventListener('click', function() {
+        const enterfirst=document.getElementById("enterfirst");
         const searchTerm = searchInput.value.toLowerCase();
         const passengers = JSON.parse(localStorage.getItem('passengers')) || [];
-        const filteredPassengers = passengers.filter(passenger => {
-            return (
-                passenger.name.toLowerCase().includes(searchTerm) ||
-                passenger.email.toLowerCase().includes(searchTerm) ||
-                passenger.country.toLowerCase().includes(searchTerm)
-            );
+        if(searchInput.value.trim()===""){
+            enterfirst.textContent="Fill the Search field to find passenger!";
+        }
+        else{
+            enterfirst.textContent="";
+            const filteredPassengers = passengers.filter(passenger => {
+                return (
+                    passenger.name.toLowerCase().includes(searchTerm) ||
+                    passenger.email.toLowerCase().includes(searchTerm) ||
+                    passenger.country.toLowerCase().includes(searchTerm)
+                );
         });
         renderTable(filteredPassengers);
+        }
     });
 
     // Initial table rendering
