@@ -1,129 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" scale="1.0">
-        <title>AIRLINE BOOKING</title>
-        <link rel="icon" href="img/wp2973292-aeroplane-wallpaper-3d.jpg">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/76f5d35c55.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="nav">
-        <div class="logo">
-            <div><img class="logoimg" src="img/aviation_logo-22.jpg"></div>
-            <div style="margin-left:2%;color:royalblue;"><h2>𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑩𝒐𝒐𝒌𝒊𝒏𝒈</h2></div>
-        </div>
-        <div class="options">
-            <div class="optionhome"><a class="homes" href="index.html">Home<hr></a></div>
-            <div class="option"><a href="about.html">About</a></div>
-            <div class="option"><a href="help.html">Help</a></div>
-            <div class="option"><a href="customer.html">Passengers</a></div>
-        </div>
-        </div>
-        <img class="mainimg" src="img/air.jpg">
-        <div class="statementoption"><h3>Maintain all the details of passengers by using the following options.</h3></div>
-        <hr class="hr">
-        <div><button id="addpassenger" class="button">ADD PASSENGER</button></div>
-        <div id="add" style="display:none;">
-            <form id="passengerForm">
-            <p>Passenger Name:</p>
-            <input type="text" id="name" placeholder="Name" required>
-            <p>Passenger Email:</p>
-            <input type="email" id="email" placeholder="Email" required>
-            <p>Passenger Country:</p>
-            <input type="text" id="country" placeholder="Country" required>
-            <p>Passenger State:</p>
-            <input type="text" id="state" placeholder="State" required>
-            <p>Passenger Phone No:</p>
-            <input type="number" id="phone" placeholder="Phone no" required>
-            <p>Gender:</p>
-            <input type="text" id="gender" placeholder="Male/Female/Other" required>
-            <p>Passenger Address:</p>
-            <textarea type="address" id="address" placeholder="Address of the passenger" required></textarea>
-            <div class="innerbuttondiv">
-            <button class="innerbutton">Add Passenger</button>
-            </div>
-            </form>
-        </div>
-        <div><button id="flightdetails" class="button">ADD FLIGHT DETAILS</button></div>
-        <div id="detailscontent" style="display:none;">
-            <form id="flightDetailsForm">
-                <p>Passenger ID:</p>
-                <input type="number" id="passengerId" placeholder="ID" required>
-                <p>Flight no:</p>
-                <input type="number" id="flightNumber" placeholder="Number" required>
-                <p>Flight Brand:</p>
-                <input type="text" id="flightBrand" placeholder="Brand" required>
-                <p>Flight Model:</p>
-                <input type="text" id="flightModel" placeholder="Model" required>
-                <p>Seat no:</p>
-                <input type="number" id="seatNumber" placeholder="Seat no" required>
-                <p>Origin:</p>
-                <input type="text" id="origin" placeholder="Origin Point" required>
-                <p>Destination:</p>
-                <input type="text" id="destination" placeholder="To Destination"required>
-                <p>Arrival Time:</p>
-                <input type="datetime-local" id="arrivalTime" required>
-                <p>Departure Time:</p>
-                <input type="datetime-local" id="departureTime" required>
-                <div class="innerbuttondiv">
-                    <button class="innerbutton" type="submit">Add Flight Detail</button>
-                </div>
-            </form>            
-        </div>
-        <div><button id="updatepassenger" class="button">UPDATE PASSENGER</button></div>
-        <div id="update" style="display:none;">
-            <form id="updatePassengerForm">
-            <p>Passenger ID:</p>
-            <input id="updateId" type="text" placeholder="Id" required>
-            <p>Passenger Name:</p>
-            <input id="updateName" type="text" placeholder="Name" required>
-            <p>Passenger Email:</p>
-            <input id="updateEmail" type="email" placeholder="Email" required>
-            <p>Passenger Country:</p>
-            <input id="updateCountry" type="text" placeholder="Country" required>
-            <p>Passenger State:</p>
-            <input id="updateState" type="text" placeholder="State" required>
-            <p>Passenger Phone No:</p>
-            <input id="updatePhone" type="number" placeholder="Phone no" required>
-            <p>Gender:</p>
-            <input id="updateGender" type="text" placeholder="Male/Female/Other" required>
-            <p>Passenger Address:</p>
-            <textarea id="updateAddress" type="address" placeholder="Address of the passenger" required></textarea>
-            <div class="innerbuttondiv">
-            <button class="innerbutton">Update Passenger</button>
-            </div>
-            </form>
-        </div>
-        <div><button id="paymentoption" class="button">PAYMENT METHODS</button></div>
-        <div id="payment" style="display:none;">
-                    <p>Credit Card:</p>
-                    <input class="inputs" type="text" id="credit-card" name="credit-card" placeholder="Card Number">
-                    <input class="inputs" type="text" name="expiry-date" placeholder="Expiry Date (MM/YY)">
-                    <input class="inputs" type="text" name="cvv" placeholder="CVV">
-                    <p>PayPal:</p>
-                    <input class="inputs" type="email" id="paypal" name="paypal" placeholder="PayPal Email">
-                    <p>Google Pay:</p>
-                    <input class="inputs" type="text" id="google-pay" name="google-pay" placeholder="Google Pay Number">
-            <div class="innerbuttondiv">
-                <button class="innerbutton">Submit Payment</button>
-            </div>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" scale="1.0">
+    <title>AIRLINE BOOKING</title>
+    <link rel="icon" href="img/wp2973292-aeroplane-wallpaper-3d.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/76f5d35c55.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <center>
+    <div id="logg" class="loginform">
+        <div>
+        <h1>Login</h1>
+        <input id="enteruser" class="username" type="text" placeholder="Username">
+        <input id="enterpass" class="password" type="password" placeholder="Password">
+        <div style="text-align:end;width:95%;"><a href="#" id="forgot-password-link">forgot password?</a></div>
+        <p id="display"><br></p>
+        <button id="enterhome" class="loginbutton" type="submit">LOGIN</button>
+        <p id="signup">New to the website? <a href="#" id="sign">SignUp</a></p>
+        <hr>
+        <p>continue with</p>
+        <button class="loginbuttons"><i class="fab fa-google"></i> google</button>
         <br>
-        <div class="logo1" id="logo1">
-            <div><img class="logoimg2" src="img/aviation_logo-22.jpg"></div>
-            <div class="hword" style="margin-left:1%;color:royalblue;"><h1>𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑩𝒐𝒐𝒌𝒊𝒏𝒈</h1></div>
+        <br>
+        <button class="loginbuttons"><i class="fab fa-microsoft"></i> Microsoft</button>
         </div>
-        <div class="socialmediadiv">
-            <hr class="hrbottom">
-            <h3>follow us:</h3>
-            <a href=""><i id="facebook" class="fab fa-facebook-square"></i></a>
-            <a href="https://www.linkedin.com/in/samuel-george-j004"><i id="linkedin" class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/samgeo12345"><i id="github" class="fab fa-github-square"></i></a>
-            <a href=""><i id="whatsapp" class="fab fa-whatsapp-square"></i></a>
-            <p>Created by <span style="color:dodgerblue;">𝑨𝒊𝒓𝒍𝒊𝒏𝒆 𝑩𝒐𝒐𝒌𝒊𝒏𝒈</span> | <i class="far fa-copyright"></i> 2024 All rights Reserved.</p>
+    </div>
+    </center>
+    <center>
+    <div id="forgot-password-form" class="loginform" style="display:none;">
+        <div>
+            <h1>Reset</h1>
+            <input id="resetuser" class="username" type="text" placeholder="Username">
+            <input id="newpass" class="password" type="password" placeholder="New Password">
+            <p id="reset-display"><br></p>
+            <button id="reset-password-button" class="loginbutton" type="submit">RESET PASSWORD</button>
+            <br>
+            <br>
+            <a href="index.html"><button class="loginbutton" type="submit"><i class="fa-solid fa-circle-left"></i> LOGIN</button></a>
+            <hr>
+        <p>continue with</p>
+        <button class="loginbuttons"><i class="fab fa-google"></i> google</button>
+        <br>
+        <br>
+        <button class="loginbuttons"><i class="fab fa-microsoft"></i> Microsoft</button>
         </div>
-        <script src="index.js"></script>
-    </body>
+    </div>
+    </center>
+    <center>
+        <div id="signup-form" class="loginform" style="display:none;">
+            <div>
+                <h1>Create</h1>
+                <input id="users" class="username" type="text" placeholder="Username">
+                <input id="passes" class="password" type="password" placeholder="Password">
+                <p id="signup-display"><br></p>
+                <button id="signup-button" class="loginbutton" type="submit">SIGN UP</button>
+                <br>
+                <br>
+                <a href="index.html"><button class="loginbutton" type="submit"><i class="fa-solid fa-circle-left"></i> LOGIN</button></a>
+                <hr>
+            <p>continue with</p>
+            <button class="loginbuttons"><i class="fab fa-google"></i> google</button>
+            <br>
+            <br>
+            <button class="loginbuttons"><i class="fab fa-microsoft"></i> Microsoft</button>
+            </div>
+        </div>
+        </center>
+    <script src="index.js"></script>
+</body>
 </html>

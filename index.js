@@ -1,3 +1,136 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const enteruser = document.getElementById("enteruser");
+    const enterpass = document.getElementById("enterpass");
+    const enterhome = document.getElementById("enterhome");
+    const display = document.getElementById("display");
+    const forgotPasswordLink = document.getElementById("forgot-password-link");
+    const forgotPasswordForm = document.getElementById("forgot-password-form");
+    const logg = document.getElementById("logg");
+    const sign = document.getElementById("sign");
+    const signup = document.getElementById("signup-form");
+    const resetUser = document.getElementById("resetuser");
+    const newPass = document.getElementById("newpass");
+    const resetDisplay = document.getElementById("reset-display");
+    const resetPasswordButton = document.getElementById("reset-password-button");
+    const signupButton = document.getElementById("signup-button");
+    const signupDisplay = document.getElementById("signup-display");
+    const signupUser = document.getElementById("users");
+    const signupPass = document.getElementById("passes");
+
+    enterhome.onclick = function () {
+        const user = enteruser.value.trim();
+        const pass = enterpass.value.trim();
+        if (user === "" && pass === "") {
+            display.textContent = "Enter username!";
+            enteruser.style.borderColor = "red";
+            enterpass.style.borderColor = "";
+        } else if (user === "") {
+            display.textContent = "Enter username!";
+            enteruser.style.borderColor = "red";
+            enterpass.style.borderColor = "";
+        } else if (pass === "") {
+            display.textContent = "Enter password!";
+            enteruser.style.borderColor = "";
+            enterpass.style.borderColor = "red";
+        } else {
+            const storedUser = localStorage.getItem(user);
+            if (storedUser && storedUser === pass) {
+                window.location.href = "home.html";
+            } else {
+                display.textContent = "Invalid Credentials!";
+                enteruser.style.borderColor = "red";
+                enterpass.style.borderColor = "red";
+            }
+        }
+    };
+
+    forgotPasswordLink.onclick = function () {
+        forgotPasswordForm.style.display = 'block';
+        logg.style.display='none';
+        signup.style.display='none';
+    };
+
+    sign.onclick=function(){
+        signup.style.display='block';
+        forgotPasswordForm.style.display = 'none';
+        logg.style.display='none';
+    }
+
+    resetPasswordButton.onclick = function () {
+        const user = resetUser.value.trim();
+        const newPassword = newPass.value.trim();
+        if (user === "" && newPassword === "") {
+            resetDisplay.textContent = "Enter username!";
+            resetUser.style.borderColor = "red";
+            newPass.style.borderColor = "";
+        }
+        else if(user === ""){
+            resetDisplay.textContent = "Enter username!";
+            resetUser.style.borderColor = "red";
+            newPass.style.borderColor = "";
+        }
+        else if(newPassword === ""){
+            resetDisplay.textContent = "Enter new password!";
+            resetUser.style.borderColor = "";
+            newPass.style.borderColor = "red";
+        }
+        else {
+            const existingUser = localStorage.getItem(user);
+            if (existingUser) {
+                localStorage.setItem(user, newPassword);
+                resetDisplay.textContent = "Password has been reset successfully!";
+                resetUser.style.borderColor = "";
+                newPass.style.borderColor = "";
+            } else {
+                resetDisplay.textContent = "You didn't sign up for this website. Please sign up first.";
+                resetUser.style.borderColor = "red";
+                newPass.style.borderColor = "";
+            }
+        }
+    };
+
+    signupButton.onclick = function () {
+        const user = signupUser.value.trim();
+        const pass = signupPass.value.trim();
+        if (user === "" && pass === "") {
+            signupDisplay.textContent = "Enter username!";
+            signupUser.style.borderColor = "red";
+            signupPass.style.borderColor = "";
+        } else if (user === "") {
+            signupDisplay.textContent = "Enter username!";
+            signupUser.style.borderColor = "red";
+            signupPass.style.borderColor = "";
+        } else if (pass === "") {
+            signupDisplay.textContent = "Enter password!";
+            signupUser.style.borderColor = "";
+            signupPass.style.borderColor = "red";
+        } else {
+            const existingUser = localStorage.getItem(user);
+            if (existingUser) {
+                signupDisplay.textContent = "Username already exists! Please choose a different username.";
+                signupUser.style.borderColor = "red";
+                signupPass.style.borderColor = "red";
+            } else {
+                localStorage.setItem(user, pass);
+                signupDisplay.textContent = "Account created successfully!";
+                signupUser.style.borderColor = "";
+                signupPass.style.borderColor = "";
+            }
+        }
+    };
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const logoutLinks = document.querySelectorAll(".logout");
+    logoutLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            if(confirm("Do you want to logout?")){
+                window.location.href = "index.html";
+            }
+        });
+    });
+});
+
 document.addEventListener("DOMContentLoaded",function(){
     const searchcontent=document.getElementById("searchcontent");
     const flightsearch=document.getElementById("flightsearch");

@@ -4,6 +4,114 @@ html,body{
     height:100vh;
     font-family:Verdana;
 }
+.loginform a p:hover{
+    color:dodgerblue;
+}
+.loginform a{
+    font-size:11px;
+    color:gray;
+}
+#display{
+    font-size:11px;
+    color:red;
+}
+#signup{
+    font-size:small;
+}
+#signup a{
+    font-size:small;
+}
+#reset-display{
+    font-size:11px;
+    color:red;
+}
+#signup-display{
+    font-size:11px;
+    color:red;
+}
+.loginform{
+    margin-top:5%;
+    padding-bottom:3%;
+    width:36%;
+    border-radius:20px;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    text-align:center;
+    background:linear-gradient(whitesmoke,silver);
+    overflow:hidden;
+}
+.loginform h1{
+    color:dodgerblue;
+}
+.loginform hr{
+    border-color:darkgray;
+    border-width:1px;
+    margin-top:5%;
+}
+.loginform div{
+    margin:auto;
+    width:80%;
+}
+.username,.password{
+    width:98%;
+    block-size:35px;
+    border-radius:50px;
+    box-shadow:none;
+    border-style:solid;
+    border-color:white;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    margin-top:4%;
+    transition:box-shadow 0.3s ease-in-out,border-color 0.3s ease-in-out;
+}
+.username::placeholder,.password::placeholder{
+    padding:4%;
+    font-family:Verdana;
+    color:darkgray;
+    font-size:12px;
+    transition: color 0.3s ease-in-out;
+}
+.username:hover,.password:hover{
+    box-shadow:none;
+    border-color:dodgerblue;
+}
+.username:hover::placeholder,.password:hover::placeholder{
+    color:black;
+}
+.loginbutton{
+    width:100%;
+    background-color:dodgerblue;
+    color:white;
+    border-color:dodgerblue;
+    font-weight:bold;
+    block-size:40px;
+    border-style:solid;
+    border-radius:50px;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    cursor:pointer;
+    transition:box-shadow 0.3s ease-in-out,color 0.3s ease-in-out,background-color 0.3s ease-in-out;
+}
+.loginbutton:hover{
+    color:dodgerblue;
+    background-color:white;
+    box-shadow:none;
+}
+.loginbuttons{
+    width:100%;
+    background-color:white;
+    border-color:white;
+    font-weight:bold;
+    color:dimgray;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    block-size:40px;
+    border-style:solid;
+    border-radius:50px;
+    cursor:pointer;
+    transition:border-color 0.3s ease-in-out,color 0.3s ease-in-out,background-color 0.3s ease-in-out;
+}
+.loginbuttons:hover{
+    color:white;
+    border-color:dodgerblue;
+    background-color:dodgerblue;
+}
 a{
     color:black;
     font-size:larger;
@@ -49,8 +157,11 @@ a:hover{
 }
 .option{
   padding-top:5%;
-  padding-left:4%;
-  padding-right:4%;
+  padding-left:3%;
+  padding-right:3%;
+}
+.logout:hover{
+    color:red;
 }
 .optionhome,.optionabout,.optionhelp,.optionpassen{
     background-color:white;
@@ -333,9 +444,33 @@ span{
 .table-container{
     overflow-x:auto;
 }
+@media(max-width:900px){
+    .loginform{
+        margin:auto;
+        margin-top:5%;
+        padding-bottom:3%;
+        width:40%;
+        border-radius:20px;
+        box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+        text-align:center;
+        background-color:whitesmoke;
+        overflow:hidden;
+    }
+}
 @media(max-width:800px){
     html{
         font-size:small;
+    }
+    .loginform{
+        margin:auto;
+        margin-top:5%;
+        padding-bottom:3%;
+        width:50%;
+        border-radius:20px;
+        box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+        text-align:center;
+        background-color:whitesmoke;
+        overflow:hidden;
     }
     .button{
         font-size:small;
@@ -416,5 +551,44 @@ span{
     }
     .company,.phone,.email{
         margin-top:-4%;
+    }
+}
+@media(max-width:700px){
+    .loginform{
+        margin:auto;
+        margin-top:5%;
+        padding-bottom:3%;
+        width:60%;
+        border-radius:20px;
+        box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+        text-align:center;
+        background-color:whitesmoke;
+        overflow:hidden;
+    }
+}
+@media(max-width:500px){
+    .loginform{
+        margin:auto;
+        margin-top:5%;
+        padding-bottom:3%;
+        width:70%;
+        border-radius:20px;
+        box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+        text-align:center;
+        background-color:whitesmoke;
+        overflow:hidden;
+    }
+}
+@media(max-width:450px){
+    .loginform{
+        margin:auto;
+        margin-top:5%;
+        padding-bottom:6%;
+        width:90%;
+        border-radius:20px;
+        box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+        text-align:center;
+        background-color:whitesmoke;
+        overflow:hidden;
     }
 }
