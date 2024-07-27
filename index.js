@@ -147,6 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear previous message and remove shake class
         msg.textContent = '';
+        input1.style.borderColor='';
+        input2.style.borderColor='';
+        input3.style.borderColor='';
+        textarea.style.borderColor='';
+        input1.style.boxShadow='';
+        input2.style.boxShadow='';
+        input3.style.boxShadow='';
+        textarea.style.boxShadow='';
         msg.className = '';
 
         // Trigger shake on every click
