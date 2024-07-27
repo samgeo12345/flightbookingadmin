@@ -198,8 +198,8 @@ a:hover{
 .optionhome,.optionabout,.optionhelp,.optionpassen{
     background-color:white;
     padding-top:5%;
-    padding-left:4%;
-    padding-right:4%;
+    padding-left:3%;
+    padding-right:3%;
 }
 .option:hover{
     background-color:whitesmoke;
