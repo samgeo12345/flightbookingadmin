@@ -79,12 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
             if (existingUser) {
                 localStorage.setItem(user, newPassword);
                 resetDisplay.textContent = "Password has been reset successfully!";
+                resetDisplay.style.color = "limegreen";
                 resetUser.style.borderColor = "";
                 newPass.style.borderColor = "";
             } else {
                 resetDisplay.textContent = "You didn't sign up for this website. Please sign up first.";
                 resetUser.style.borderColor = "red";
-                newPass.style.borderColor = "";
+                newPass.style.borderColor = "red";
             }
         }
     };
@@ -109,10 +110,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (existingUser) {
                 signupDisplay.textContent = "Username already exists! Please choose a different username.";
                 signupUser.style.borderColor = "red";
-                signupPass.style.borderColor = "red";
+                signupPass.style.borderColor = "";
             } else {
                 localStorage.setItem(user, pass);
                 signupDisplay.textContent = "Account created successfully!";
+                signupDisplay.style.color = "limegreen";
                 signupUser.style.borderColor = "";
                 signupPass.style.borderColor = "";
             }
