@@ -223,7 +223,7 @@ a:hover{
 }
 #username{
     font-size:large;
-    color:gray;
+    color:dimgray;
 }
 .mainimg{
     width:100%;
@@ -521,10 +521,10 @@ span{
     .logoutdiv{
         margin-top:9%;
         margin-right:15%;
-        font-size:x-small;
+        font-size:small;
     }
     #username{
-        font-size:small;
+        font-size:medium;
     }
     .loginform{
         margin:auto;
@@ -646,7 +646,6 @@ span{
     .logoutdiv{
         margin-top:12%;
         margin-right:10%;
-        font-size:x-small;
     }
 }
 @media(max-width:450px){
@@ -664,6 +663,5 @@ span{
     .logoutdiv{
         margin-top:14%;
         margin-right:2%;
-        font-size:x-small;
     }
 }
