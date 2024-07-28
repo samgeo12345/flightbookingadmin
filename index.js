@@ -155,6 +155,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+    
+    // Load the initial mode from localStorage if available
+    if (localStorage.getItem('mode') === 'dark') {
+      body.classList.add('dark-mode');
+      modeToggle.innerHTML = '<p><i class="fas fa-toggle-off"></i> light</p>';
+    }
+
+    modeToggle.addEventListener('click', function(event) {
+      event.preventDefault();
+      body.classList.toggle('dark-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        modeToggle.innerHTML = '<p><i class="fas fa-toggle-off"></i> light</p>';
+        localStorage.setItem('mode', 'dark');
+      } else {
+        modeToggle.innerHTML = '<p><i class="fas fa-toggle-on"></i> dark</p>';
+        localStorage.setItem('mode', 'light');
+      }
+    });
+  });
+
 document.addEventListener('DOMContentLoaded', () => {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxdJfq_F0APjCQoNEJVtZQ2ROssmIfQhhbBViMee6eNEXiMaqo1XkgEsJrV7v9Q3Q_Y/exec';
     const form = document.forms['submit-to-google-sheet'];

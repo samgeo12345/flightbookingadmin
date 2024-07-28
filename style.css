@@ -4,6 +4,130 @@ html,body{
     height:100vh;
     font-family:Verdana;
 }
+body.dark-mode .loginform{
+    background:linear-gradient(rgb(40,40,40),rgb(60,60,60));
+    box-shadow:0px 0px 1px rgba(255,255,255,0.9);
+}
+body.dark-mode .loginbuttons{
+    background-color:lightgray;
+    border-color:lightgray;
+    box-shadow:0px 0px 1px rgba(255,255,255,0.9);
+}
+body.dark-mode .loginbuttons:hover{
+    background-color:dodgerblue;
+    border-color:dodgerblue;
+}
+body.dark-mode .loginbutton:hover{
+    background-color:unset;
+}
+body.dark-mode .username,body.dark-mode .password{
+    background-color:rgb(60,60,60);
+    border-color:rgb(60,60,60);
+    color:white;
+    box-shadow:0px 0px 1px rgba(255,255,255,0.9);
+}
+body.dark-mode .username:hover::placeholder,
+body.dark-mode .password:hover::placeholder{
+    color:white;
+}
+body.dark-mode .username:hover,body.dark-mode .password:hover{
+    border-color:dodgerblue;
+}
+body.dark-mode,body.dark-mode .nav,body.dark-mode .container{
+    background-color:rgb(40,40,40);
+    color: whitesmoke;
+}
+body.dark-mode #add,body.dark-mode #detailscontent,
+body.dark-mode #update,body.dark-mode #payment{
+    background-color:rgba(40,40,40);
+    box-shadow:0px 0px 1px rgba(255,255,255,0.9);
+}
+body.dark-mode input,body.dark-mode textarea{
+    background-color:rgb(60,60,60);
+    border-color:rgb(60,60,60);
+    color:white;
+    box-shadow:0px 0px 1px rgba(255,255,255,0.9);
+}
+body.dark-mode .innerbutton:hover{
+    background-color:rgb(40,40,40);
+}
+body.dark-mode .optionhome,body.dark-mode .optionabout,
+body.dark-mode .optionhelp,
+body.dark-mode .optionpassen,
+body.dark-mode .homes{
+    background-color:rgb(40,40,40);
+}
+body.dark-mode .option a{
+    color:whitesmoke;
+}
+body.dark-mode .logoutdiv,body.dark-mode .light{
+    background:linear-gradient(rgb(40,40,40),rgb(50,50,50));
+    color:whitesmoke;
+}
+body.dark-mode .logclick:hover{
+    color:silver;
+}
+body.dark-mode #input1,body.dark-mode #input2,body.dark-mode #input3,
+body.dark-mode #textarea{
+    background-color:rgb(60,60,60);
+    border-color:rgb(60,60,60);
+    color:white;
+}
+body.dark-mode .sendbutton:hover{
+    background-color:rgb(40,40,40);
+}
+body.dark-mode #username{
+    color:darkgray;
+}
+body.dark-mode .light:hover{
+    color:dodgerblue;
+}
+body.dark-mode .logout,body.dark-mode #contacticon{
+    color:whitesmoke;
+}
+body.dark-mode .button{
+    background-color:lightgray;
+}
+body.dark-mode .button:hover{
+    background-color:silver;
+}
+body.dark-mode .option:hover{
+    background-color:rgba(50,50,50);
+}
+body.dark-mode a:hover{
+    color:dodgerblue;
+}
+body.dark-mode .logout:hover{
+    color:red;
+}
+body.dark-mode table tr td{
+    background-color:rgb(40,40,40);
+}
+body.dark-mode table tr{
+    box-shadow:0px 0px 1px rgba(255,255,255,0.9);
+}
+body.dark-mode #flightDetailsContainer{
+    background:linear-gradient(rgb(40,40,40),rgb(60,60,60));
+    box-shadow:0px 0px 1px rgba(255,255,255,0.9);
+}
+body.dark-mode #search,body.dark-mode .searches{
+    background-color:rgb(60,60,60);
+    color:white;
+}
+body.dark-mode #search{
+    box-shadow:none;
+}
+body.dark-mode #search:hover::placeholder{
+    color:white;
+}
+body.dark-mode .searches{
+    box-shadow:0px 0px 1px rgba(255,255,255);
+}
+body.dark-mode #facebook:hover,body.dark-mode #linkedin:hover,
+body.dark-mode #github:hover,body.dark-mode #whatsapp:hover
+{
+    filter:drop-shadow(0px 0px 0.5px rgba(255,255,255,0.9));
+}
 .loginform a p:hover{
     color:dodgerblue;
 }
@@ -228,6 +352,9 @@ a:hover{
     font-size:large;
     color:dimgray;
 }
+.light{
+    font-size:large;
+}
 .mainimg{
     width:100%;
 }
@@ -243,6 +370,9 @@ a:hover{
     box-shadow:none;
     border-style:none;
     outline:none;
+}
+.searchbar::placeholder{
+    padding-left:2%;
 }
 .searchbar:hover::placeholder{
     color:black;
