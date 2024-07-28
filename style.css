@@ -216,10 +216,13 @@ a:hover{
     padding-top:1%;
     text-align:center;
     box-shadow:5px 5px 5px rgba(0,0,0,0.3);
-    background:linear-gradient(white,lightgray);
+    background:linear-gradient(white,whitesmoke);
 }
 .logclick{
     font-size:x-large;
+}
+.logclick:hover{
+    color:gray;
 }
 #username{
     font-size:large;
