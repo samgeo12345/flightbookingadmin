@@ -779,6 +779,7 @@ span{
     .logoutdiv{
         margin-top:12%;
         margin-right:10%;
+        padding:2% 5%;
     }
 }
 @media(max-width:450px){
@@ -794,6 +795,7 @@ span{
         overflow:hidden;
     }
     .logoutdiv{
+        padding:2% 5%;
         margin-top:14%;
         margin-right:2%;
     }
