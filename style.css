@@ -204,6 +204,27 @@ a:hover{
 .option:hover{
     background-color:whitesmoke;
 }
+.logoutdiv{
+    position:absolute;
+    z-index:1000;
+    display:none;
+    right:4%;
+    margin:6% auto;
+    font-size:small;
+    border-radius:6px;
+    padding:3%;
+    padding-top:1%;
+    text-align:center;
+    box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+    background:linear-gradient(white,lightgray);
+}
+.logclick{
+    font-size:x-large;
+}
+#username{
+    font-size:large;
+    color:gray;
+}
 .mainimg{
     width:100%;
 }
@@ -497,6 +518,14 @@ span{
     html{
         font-size:small;
     }
+    .logoutdiv{
+        margin-top:9%;
+        margin-right:15%;
+        font-size:x-small;
+    }
+    #username{
+        font-size:small;
+    }
     .loginform{
         margin:auto;
         margin-top:5%;
@@ -614,6 +643,11 @@ span{
         background-color:whitesmoke;
         overflow:hidden;
     }
+    .logoutdiv{
+        margin-top:12%;
+        margin-right:10%;
+        font-size:x-small;
+    }
 }
 @media(max-width:450px){
     .loginform{
@@ -626,5 +660,10 @@ span{
         text-align:center;
         background-color:whitesmoke;
         overflow:hidden;
+    }
+    .logoutdiv{
+        margin-top:14%;
+        margin-right:2%;
+        font-size:x-small;
     }
 }

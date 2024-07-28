@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             const storedUser = localStorage.getItem(user);
             if (storedUser && storedUser === pass) {
+                localStorage.setItem('loggedInUser', user);
                 window.location.href = "home.html";
             } else {
                 display.textContent = "Invalid Credentials!";
@@ -121,15 +122,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const username = localStorage.getItem('loggedInUser');
+    if (username) {
+        document.getElementById('username').innerHTML = `<i class="fas fa-user"></i> ${username.split(' ')[0]}`;
+    } else {
+        // If no user is logged in, redirect to the login page
+        window.location.href = "index.html";
+    }
+});
 document.addEventListener("DOMContentLoaded", function () {
     const logoutLinks = document.querySelectorAll(".logout");
     logoutLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
-            if(confirm("Do you want to logout?")){
+            if (confirm("Do you want to logout?")) {
                 window.location.href = "index.html";
             }
         });
+    });
+
+    const logclick = document.querySelector(".logclick");
+    const logoutdiv = document.querySelector(".logoutdiv");
+
+    logclick.addEventListener("click", function (event) {
+        event.preventDefault();
+        if (logoutdiv.style.display === "block") {
+            logoutdiv.style.display = "none";
+            logclick.style.color="";
+        } else {
+            logoutdiv.style.display = "block";
+            logclick.style.color="dodgerblue";
+        }
     });
 });
 
