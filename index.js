@@ -127,10 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const username = localStorage.getItem('loggedInUser');
     if (username) {
         document.getElementById('username').innerHTML = `<i class="fas fa-user"></i> ${username.split(' ')[0]}`;
-    } else {
-        // If no user is logged in, redirect to the login page
-        window.location.href = "index.html";
-    }
+    } 
 });
 document.addEventListener("DOMContentLoaded", function () {
     const logoutLinks = document.querySelectorAll(".logout");
