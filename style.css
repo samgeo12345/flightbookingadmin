@@ -35,7 +35,7 @@ body.dark-mode .username:hover,body.dark-mode .password:hover{
 }
 body.dark-mode,body.dark-mode .nav,body.dark-mode .container{
     background-color:rgb(40,40,40);
-    color: whitesmoke;
+    color:lightgray;
 }
 body.dark-mode #add,body.dark-mode #detailscontent,
 body.dark-mode #update,body.dark-mode #payment{
