@@ -77,8 +77,11 @@ body.dark-mode #username{
 body.dark-mode .light:hover{
     color:dodgerblue;
 }
-body.dark-mode .logout,body.dark-mode #contacticon{
+body.dark-mode .logout{
     color:whitesmoke;
+}
+body.dark-mode #contacticon{
+    color:lightgray;
 }
 body.dark-mode .statementoption{
     color:rgb(50,50,50);
